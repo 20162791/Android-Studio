@@ -19,6 +19,7 @@ public class RegistActivity extends AppCompatActivity {
     private EditText etPasswordConfirm;
     private Button btnDone;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
