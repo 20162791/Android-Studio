@@ -18,7 +18,7 @@ public class RegistActivity extends AppCompatActivity {
     private EditText etPassword;
     private EditText etPasswordConfirm;
     private Button btnDone;
-
+    private Button btnCancel;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,6 +29,7 @@ public class RegistActivity extends AppCompatActivity {
         etPassword = (EditText) findViewById(R.id.etPassword);
         etPasswordConfirm = (EditText) findViewById(R.id.etPasswordConfirm);
         btnDone = (Button) findViewById(R.id.btnDone);
+        btnCancel = (Button) findViewById(R.id.btnCancel);
 
         // 비밀번호 일치 검사
         etPasswordConfirm.addTextChangedListener(new TextWatcher() {
@@ -100,8 +101,15 @@ public class RegistActivity extends AppCompatActivity {
             }
         });
 
+        btnCancel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
 
     }
+
 
 }
 
